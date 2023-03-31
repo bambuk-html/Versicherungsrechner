@@ -11,6 +11,12 @@ const Layout = () => {
           <li>
             <Link to="Quadratmeter">Quadratmeter</Link>
           </li>
+          <li>
+            <Link to="Tesdpage">Testpage</Link>
+          </li>
+          <li>
+            <Link to="Summe">Versicherungssummenmodell</Link>
+          </li>
         </ul>
       </nav>
       <Outlet />
