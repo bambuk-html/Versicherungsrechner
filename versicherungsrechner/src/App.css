@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.homediv {
+  background-image: url("\img\Hubble_ultra_deep_field_high_rez_edit1.jpg");
+}

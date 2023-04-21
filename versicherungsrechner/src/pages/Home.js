@@ -3,7 +3,7 @@ import SummeButton from "../Components/SummeButton";
 
 const Home = () => {
     return (
-        <div>
+        <div class="homediv">
             <h1>Home</h1>
             <QuadratButton/ >
             <SummeButton/ >
