@@ -7,10 +7,12 @@ import NoPage from "./pages/NoPage";
 import Quadratmeter from "./pages/Quadratmeter";
 import Tesdpage from "./pages/Tesdpage";
 import Summe from "./pages/Summe";
+import  "./App.css"
+
 
 export default function App() {
   return (
-    <div>
+    <div className="homediv">
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -22,7 +24,6 @@ export default function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-    
     </div>
   );
 }

@@ -32,7 +32,7 @@ function Quadratrechner() {
           />
         </label>
         <br />
-        <button type="submit">Multiply</button>
+        <button type="submit">Berechnen</button>
       </form>
       <h3>Versicherungssumme: {result}</h3>
     </div>
