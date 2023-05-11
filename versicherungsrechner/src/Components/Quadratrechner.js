@@ -15,26 +15,28 @@ function Quadratrechner() {
       <h2>Quadratrechner</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Fläche in Quadratmeter
+          Fläche in Quadratmeter:
           <input
             type="number"
+            min="0"
             value={number1}
-            onChange={(e) => setNumber1(Number(e.target.value))}
+            onChange={(e) => setNumber1(e.target.value)}
           />
         </label>
         <br />
         <label>
-          Kosten pro Quadratmeter
-          <input
+          Durchschnittliche Kosten pro Quadratmeter: 
+          <input 
             type="number"
+            min="0"
             value={number2}
-            onChange={(e) => setNumber2(Number(e.target.value))}
+            onChange={(e) => setNumber2(e.target.value)}
           />
         </label>
         <br />
         <button type="submit">Berechnen</button>
       </form>
-      <h3>Versicherungssumme: {result}</h3>
+      <h3>Versicherungssumme in CHF: {result}</h3>
     </div>
   );
 }
