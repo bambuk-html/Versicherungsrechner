@@ -30,9 +30,16 @@ function HausratVersicherungsrechner() {
     <div>
       <h2>Hausrat-Versicherungsrechner</h2>
       <form>
-        <label>
+      <label>
           Anzahl der Zimmer:
-          <input type="number" min="0" value={zimmer} onChange={handleZimmerChange} />
+          <select value={zimmer} onChange={handleZimmerChange}>
+            <option value="">Bitte wählen</option>
+            <option value="1">1 Zimmer</option>
+            <option value="2">2 Zimmer</option>
+            <option value="3">3 Zimmer</option>
+            <option value="4">4 Zimmer</option>
+            <option value="5">5 Zimmer oder mehr</option>
+          </select>
         </label>
         <br />
         <label>
