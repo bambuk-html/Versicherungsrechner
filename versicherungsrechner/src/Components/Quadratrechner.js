@@ -15,7 +15,7 @@ function Quadratrechner() {
       <h2>Quadratrechner</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Fläche in Quadratmeter:
+          <h4>Fläche in Quadratmeter:</h4>
           <input
             type="number"
             min="0"
@@ -25,7 +25,8 @@ function Quadratrechner() {
         </label>
         <br />
         <label>
-          Durchschnittliche Kosten pro Quadratmeter: 
+          <h4>Durchschnittliche Kosten pro Quadratmeter:</h4>
+          <p>Als Pauschale pro Quadratmeter Wohnfläche kannman mit einem Wert von CHF 1'000 rechnen.</p>
           <input 
             type="number"
             min="0"
