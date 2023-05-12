@@ -19,7 +19,7 @@ function HausratVersicherungsrechner() {
   }
 
   function handleWertvolleGegenstaendeChange(event) {
-    setWertvolleGegenstaende(event.target.value.split(','));
+    setWertvolleGegenstaende(event.target.value);
   }
 
   function berechneVersicherungssumme() {
@@ -62,12 +62,13 @@ function HausratVersicherungsrechner() {
     versicherungssumme += basiswert * 1.4;
     }
     
+
    versicherungssumme = versicherungssumme + parseInt(wertvolleGegenstaende);
 
     return versicherungssumme;
     }
     
-    
+
   return (
     <div id="summerrechner">
       <form id="summenform">
@@ -104,7 +105,7 @@ function HausratVersicherungsrechner() {
 <br />
 
 <label>
-Wertvolle Gegenstände (durch Komma getrennt):
+Wertvolle Gegenstände:
 <div id="gegenstaende">
 <input type="text" min="0" value={wertvolleGegenstaende} onChange={handleWertvolleGegenstaendeChange} />
 </div>

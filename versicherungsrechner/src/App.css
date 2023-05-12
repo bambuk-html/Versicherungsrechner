@@ -563,3 +563,7 @@ flex-direction: column;
 #beschreibung {
   font-size: x-small;
 }
+
+body {
+  background-image: url("https://torange.biz/photo/13/HD/life-outdoors-rural-houses-lonely-house-13190.jpg");
+}
