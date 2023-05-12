@@ -4,7 +4,7 @@ export default function HomeButton() {
   return (
     <div>
       <Link to="/">
-        <button>To Homepage</button>
+        <button>Zurück zur Auswahl</button>
       </Link>
     </div>
   );
