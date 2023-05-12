@@ -11,11 +11,10 @@ function Quadratrechner() {
   };
 
   return (
-    <div>
-      <h2>Quadratrechner</h2>
-      <form onSubmit={handleSubmit}>
+    <div id="quadraterrechner">
+      <form id="quadratform" onSubmit={handleSubmit}>
         <label>
-          <h4>Fläche in Quadratmeter:</h4>
+          <h4>Wohnfläche in Quadratmeter:</h4>
           <input
             type="number"
             min="0"
@@ -26,18 +25,21 @@ function Quadratrechner() {
         <br />
         <label>
           <h4>Durchschnittliche Kosten pro Quadratmeter:</h4>
-          <p>Als Pauschale pro Quadratmeter Wohnfläche kannman mit einem Wert von CHF 1'000 rechnen.</p>
+          <p id="beschreibung">Als Pauschale pro Quadratmeter Wohnfläche kannman mit einem Wert von CHF 1'000 rechnen.</p>
+          <div id="kostenprom">
           <input 
             type="number"
             min="0"
             value={number2}
             onChange={(e) => setNumber2(e.target.value)}
           />
+          </div>
         </label>
         <br />
         <button type="submit">Berechnen</button>
+        <br />
+        <h3>Versicherungssumme in CHF: {result}</h3>
       </form>
-      <h3>Versicherungssumme in CHF: {result}</h3>
     </div>
   );
 }

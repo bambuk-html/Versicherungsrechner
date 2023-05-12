@@ -66,9 +66,8 @@ function HausratVersicherungsrechner() {
     }
 
   return (
-    <div>
-      <h2>Hausrat-Versicherungsrechner</h2>
-      <form>
+    <div id="summerrechner">
+      <form id="summenform">
       <label>
           Anzahl der Zimmer:
           <select value={zimmer} onChange={handleZimmerChange}>
@@ -98,12 +97,15 @@ function HausratVersicherungsrechner() {
           </select>
         </label>
 <br />
+
 <label>
 Preis wertvoller Gegenstände (durch Komma getrennt):
+<div id="gegenstaende">
 <input type="number" min="0" value={wertvolleGegenstaende} onChange={handleWertvolleGegenstaendeChange} />
+</div>
 </label>
+<h2>Versicherungssumme: {berechneVersicherungssumme()} Franken</h2>
 </form>
-<p>Versicherungssumme: {berechneVersicherungssumme()} Franken</p>
 </div>
 );
 }

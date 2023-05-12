@@ -3,8 +3,8 @@ import SummeButton from "../Components/SummeButton";
 
 const Home = () => {
     return (
-        <div>
-            <h1>Home</h1>
+        <div id="haupttitel">
+            <h1>Hausrat-Versicherungssumme berechnen</h1>
             <QuadratButton/ >
             <SummeButton/ >
         </div>

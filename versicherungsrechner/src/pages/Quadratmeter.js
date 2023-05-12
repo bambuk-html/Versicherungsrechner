@@ -3,9 +3,11 @@ import Quadratrechner from "../Components/Quadratrechner";
 
 const Quadratmeter= () => {
     return (
-        <div>
+        <div id="quadratseite">
             <h1>Quadratmetermodell</h1>
+            <br />
             <Quadratrechner/ >
+            <br />
             <HomeButton/ >
         </div>
     );
