@@ -38,6 +38,30 @@ function HausratVersicherungsrechner() {
     versicherungssumme += basiswert * 1.4;
     }
     
+    if (wohnflaeche <= 40) {
+    versicherungssumme += basiswert * 0.6;
+    } else if (wohnflaeche <= 60) {
+    versicherungssumme += basiswert * 0.8;
+    } else if (wohnflaeche <= 80) {
+    versicherungssumme += basiswert * 1;
+    } else if (wohnflaeche <= 100) {
+    versicherungssumme += basiswert * 1.2;
+    } else if (wohnflaeche > 100) {
+    versicherungssumme += basiswert * 1.4;
+    }
+    
+    if (personen === "1") {
+    versicherungssumme += basiswert * 0.6;
+    } else if (personen === "2") {
+    versicherungssumme += basiswert * 0.8;
+    } else if (personen === "3") {
+    versicherungssumme += basiswert * 1;
+    } else if (personen === "4") {
+    versicherungssumme += basiswert * 1.2;
+    } else if (personen === "5") {
+    versicherungssumme += basiswert * 1.4;
+    }
+    
     return versicherungssumme;
     }
 
