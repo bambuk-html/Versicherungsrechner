@@ -23,8 +23,23 @@ function HausratVersicherungsrechner() {
   }
 
   function berechneVersicherungssumme() {
-    //hier kommt der hauptteil der logik hin
-  }
+    let versicherungssumme = 0;
+    const basiswert = 50000;
+    
+    if (zimmer === "1") {
+    versicherungssumme += basiswert * 0.6;
+    } else if (zimmer === "2") {
+    versicherungssumme += basiswert * 0.8;
+    } else if (zimmer === "3") {
+    versicherungssumme += basiswert * 1;
+    } else if (zimmer === "4") {
+    versicherungssumme += basiswert * 1.2;
+    } else if (zimmer === "5") {
+    versicherungssumme += basiswert * 1.4;
+    }
+    
+    return versicherungssumme;
+    }
 
   return (
     <div>
@@ -43,26 +58,28 @@ function HausratVersicherungsrechner() {
         </label>
         <br />
         <label>
-          Wohnfläche:
+          Wohnfläche in Quadratmeter: 
 <input type="number" min="0" value={wohnflaeche} onChange={handleWohnflaecheChange} />
 </label>
 <br />
 <label>
-Anzahl der Personen:
-<input type="number" min="0" value={personen} onChange={handlePersonenChange} />
-</label>
+          Anzahl der Personen:
+          <select value={personen} onChange={handlePersonenChange}>
+            <option value="">Bitte wählen</option>
+            <option value="1">1 Person</option>
+            <option value="2">2 Personen</option>
+            <option value="3">3 Personen</option>
+            <option value="4">4 Personen</option>
+            <option value="5">5 Personen oder mehr</option>
+          </select>
+        </label>
 <br />
 <label>
-Wertvolle Gegenstände (durch Komma getrennt):
-<input type="text" min="0" value={wertvolleGegenstaende} onChange={handleWertvolleGegenstaendeChange} />
+Preis wertvoller Gegenstände (durch Komma getrennt):
+<input type="number" min="0" value={wertvolleGegenstaende} onChange={handleWertvolleGegenstaendeChange} />
 </label>
-<br />
-<button onClick={berechneVersicherungssumme}>Berechnen</button>
 </form>
-{
-    //ergebnis
-    
-}
+<p>Versicherungssumme: {berechneVersicherungssumme()} Franken</p>
 </div>
 );
 }
