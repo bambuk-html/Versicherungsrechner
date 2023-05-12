@@ -62,9 +62,12 @@ function HausratVersicherungsrechner() {
     versicherungssumme += basiswert * 1.4;
     }
     
+   versicherungssumme = versicherungssumme + parseInt(wertvolleGegenstaende);
+
     return versicherungssumme;
     }
-
+    
+    
   return (
     <div id="summerrechner">
       <form id="summenform">
@@ -80,10 +83,12 @@ function HausratVersicherungsrechner() {
           </select>
         </label>
         <br />
+        <div id="gegenstaende">
         <label>
-          Wohnfläche in Quadratmeter: 
+          Wohnfläche in Quadratmeter:
 <input type="number" min="0" value={wohnflaeche} onChange={handleWohnflaecheChange} />
 </label>
+</div>
 <br />
 <label>
           Anzahl der Personen:
@@ -99,9 +104,9 @@ function HausratVersicherungsrechner() {
 <br />
 
 <label>
-Preis wertvoller Gegenstände (durch Komma getrennt):
+Wertvolle Gegenstände (durch Komma getrennt):
 <div id="gegenstaende">
-<input type="number" min="0" value={wertvolleGegenstaende} onChange={handleWertvolleGegenstaendeChange} />
+<input type="text" min="0" value={wertvolleGegenstaende} onChange={handleWertvolleGegenstaendeChange} />
 </div>
 </label>
 <h2>Versicherungssumme: {berechneVersicherungssumme()} Franken</h2>
